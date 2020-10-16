@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- les mots clefs utiles pour les moteurs de recherche moins utilisées de nos jours -->
+    <meta name="description" content="Site Suresnes 2020 - Colombbus">
+        <!-- la description indispensable pour les moteurs de recherche et qui s'affiche dans les résultats  -->
+    <meta name="keywords" content="HTML, CSS, Salvatore Giovinetti, colombbus, suresnes, salvatore.html"> 
+    <meta name="autor" content="Salvatore Giovinetti">
+    <title>Salvatore</title>
+    
+    <!-- Google Font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lemonada&family=Oswald&display=swap" rel="stylesheet">
+    <!-- LES TYPOS  -->
+    <script src="https://kit.fontawesome.com/b241a30995.js" crossorigin="anonymous"></script>
+
+    <!-- reset avec mes modifs en externe -->
+    <!-- <link rel="stylesheet" href="css/reset_ecric_mayer_modifier.css">-->
+    <style>
+        body {
+            background-color: #fff;
+            width: 100%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: lightblue;
+            height: 100px;
+            width: 100%;
+            margin: auto;
+        }
+        nav {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: space-around;
+        }
+        nav a {
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.75);
+            border: 5px solid rgb(255, 217, 0);
+            border-radius: 5px;
+            height: 25px;
+            width: 150px;
+        }
+
+        nav a:hover {
+            background-color: goldenrod;
+            color: black;
+        }
+        main {
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(255, 223, 119);
+        }
+
+        footer {
+            background-color: lightgrey;
+            height: 100px;
+            text-align: center;
+            align-items: center;
+        }
+                    /* A finir  */
+        /* #sav-qgv-cgu {
+
+        } */
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav><!-- navigation avec ses pages et ancres -->
+                <a href="salvatore.html" title="Accueil">Accueil</a>
+                <a href="apropos.html" title="A Propos" >A Propos</a>
+                <a href="galeries.html" title="Galerie">Galeries</a>
+                <a href="contact.html" title="Contact" >Contact</a>
+                <a href="#sav-qgv-cu.html" title="sav-qgv-cgu">Mentions Légales</a>
+        </nav>
+    </header>
+    <main>
+        <section id="formulaire"><!-- formulaire d'informations -->
+            <h2>Formulaire d'inscription - <i class="fab fa-wpforms"></i></h2>
+                <form action="incription.php" method="POST" enctype="multipart/form-data">
+                    <label for="pseudo">Pseudo *</label>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" required>
+                    <br>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre Prénom" required>
+                    <br>
+                    <label for="password">Mot de passe *</label>
+                    <input type="password" name="password" id="password" placeholder="Votre mot de passe" required>
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Votre Email" required>
+
+                    <label for="genre">Votre Sexe *: </label>
+                    <!-- SELECT  -->
+                    <select name="genre" id="genre">
+                        <option value="F">Femme</option>
+                        <option value="H">Homme</option>
+                        <option value="K">Autre</option>
+                    </select>
+
+                    <label for="tel">Téléphone Personnel :</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Téléphone" required>
+
+                    <label for="tranche">Âge *:</label>
+                        <br><br>
+                        <!-- Attribut CHECKED le bouton radio est coché par défaut  -->
+                        <input type="radio" name="tranche" id="tranche"> De 15 à 18 ans
+                        <br><br>
+                        <input type="radio" name="tranche" id="tranche"> De 19 à 25 ans
+                        <br><br>
+                        <input type="radio" name="tranche" id="tranche"> De 26 à 50 ans
+                        <br><br>
+                        <input type="radio" name="tranche" id="tranche"> + 50 ans
+                
+                    <br>
+                    <input type="submit" name="connexion" value="Envoyé">
+                    <input type="reset" name="réinitialiser" value="Réinitialiser" >
+                </form>
+        </section>
+        <section id="connexion">
+            <form> <!-- formulaire de connexion et d'inscription -->
+                <legend>Information de connexion</legend>
+    
+                <label for="pseudo">Pseudonyme * :</label>
+
+                <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" required>
+                
+                <label for="mdp">Mot de passe *:</label>
+                <input type="password" name="mdp" id="mdp" placeholder="Votre mot de passe" required>
+                <div id="inscription">
+                    <legend>Inscription</legend>
+                    <input type="submit" name="incription" value="Inscription">
+                    <input type="reset" name="réinitialiser" value="Réinitialiser" >
+                </div>
+            </form>
+        </section>
+        <p><u>* Champs obligatoire *</u></p>
+    </main>
+    <footer>
+        <div id="sav-qgv-cgu">
+            <a href="sav-qgv-cgu.html">SAV</a><br>
+            <a href="sav-qgv-cgu.html">QGV</a><br>
+            <a href="sav-qgv-cgu.html">CGU</a>
+        </div>
+    </footer>
+</body>
+</html>
